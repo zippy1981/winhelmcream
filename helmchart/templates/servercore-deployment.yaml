@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servercore-iis
+spec:
+  replicas: {{ .Values.nodePools.servercore.replicas }}
+  selector:
+    matchLabels:
+      app: servercore-iis
+  template:
+    metadata:
+      labels:
+        app: servercore-iis
+    spec:
+      nodeSelector:
+        kubernetes.io/os: windows
+        nodepool: servercore
+      containers:
+        - name: iis-servercore
+          image: {{ .Values.nodePools.servercore.image }}
+          ports:
+            - containerPort: 80

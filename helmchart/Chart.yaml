@@ -1,0 +1,4 @@
+apiVersion: v2
+name: winhelmcream
+version: 0.1.0
+description: Helm chart with two nodepools for IIS on Windows Server Core and Nanoserver

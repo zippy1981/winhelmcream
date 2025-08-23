@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nanoserver
+spec:
+  replicas: {{ .Values.nodePools.nanoserver.replicas }}
+  selector:
+    matchLabels:
+      app: nanoserver
+  template:
+    metadata:
+      labels:
+        app: nanoserver
+    spec:
+      nodeSelector:
+        kubernetes.io/os: windows
+        nodepool: nanoserver
+      containers:
+        - name: nanoserver
+          image: {{ .Values.nodePools.nanoserver.image }}

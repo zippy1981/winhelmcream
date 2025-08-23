@@ -1,0 +1,7 @@
+nodePools:
+  servercore:
+    replicas: 1
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019-amd64
+  nanoserver:
+    replicas: 1
+    image: mcr.microsoft.com/windows/nanoserver:ltsc2019-amd64
