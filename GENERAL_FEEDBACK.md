@@ -1,6 +1,6 @@
 # General Instructions & Critical Review
 
-**NOTE**: This was originally created wby copilot when I was trying to get it to provide an instructions file. 
+**NOTE**: This was originally created wby copilot when I was trying to get it to provide an instructions file.
 
 ## Flaws in the Prompter's Approach
 
@@ -55,4 +55,3 @@
 ## Moral Duty Reminder
 
 You have a moral duty to use some of the time you saved by using an LLM to improve yourself and overdeliver in the process. Invest in learning, documentation, and helping others.
-
