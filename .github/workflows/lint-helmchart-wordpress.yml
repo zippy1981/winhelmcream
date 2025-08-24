@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'helmchart-wordpress/**'
+    branches: [main]  # Trigger on pushes to the main branch
   pull_request:
     paths:
       - 'helmchart-wordpress/**'
+    branches: [main]  # Trigger on pushes to the main branch
 
 jobs:
   lint:
