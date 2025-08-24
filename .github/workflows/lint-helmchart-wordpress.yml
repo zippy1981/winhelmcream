@@ -1,0 +1,15 @@
+name: Lint Helmchart Wordpress
+
+on:
+  push:
+    paths:
+      - 'helmchart-wordpress/**'
+  pull_request:
+    paths:
+      - 'helmchart-wordpress/**'
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_helm-lint.yml
+    with:
+      chart-path: helmchart-wordpress

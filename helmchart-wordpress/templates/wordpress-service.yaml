@@ -1,0 +1,14 @@
+{{- range .Values.wordpressSites }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wordpress-{{ .name }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: wordpress-{{ .name }}
+{{- end }}

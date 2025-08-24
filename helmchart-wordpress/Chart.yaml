@@ -1,0 +1,11 @@
+apiVersion: v2
+name: wordpress-production
+version: 0.1.0
+description: Helm chart for production WordPress on AKS with shared MySQL cluster
+keywords:
+  - wordpress
+  - mysql
+  - aks
+  - production
+maintainers:
+  - name: GitHub Copilot

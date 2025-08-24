@@ -1,0 +1,15 @@
+name: Lint Helmchart
+
+on:
+  push:
+    paths:
+      - 'helmchart/**'
+  pull_request:
+    paths:
+      - 'helmchart/**'
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_helm-lint.yml
+    with:
+      chart-path: helmchart
