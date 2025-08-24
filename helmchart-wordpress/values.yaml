@@ -1,0 +1,18 @@
+wordpressSites:
+  - name: site1
+    host: site1.localtest.me
+  - name: site2
+    host: site2.localtest.me
+mysql:
+  replicaCount: 3
+  rootPassword: "changeMe"
+  user: "wordpress"
+  password: "changeMe"
+  database: "wordpress"
+resources:
+  requests:
+    cpu: "250m"
+    memory: "512Mi"
+  limits:
+    cpu: "1"
+    memory: "2Gi"

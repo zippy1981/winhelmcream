@@ -1,0 +1,17 @@
+name: Lint Helmchart Wordpress
+
+on:
+  push:
+    paths:
+      - 'helmchart-wordpress/**'
+    branches: [main]  # Trigger on pushes to the main branch
+  pull_request:
+    paths:
+      - 'helmchart-wordpress/**'
+    branches: [main]  # Trigger on pushes to the main branch
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_helm-lint.yml
+    with:
+      chart-path: helmchart-wordpress

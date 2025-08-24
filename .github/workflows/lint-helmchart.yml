@@ -1,0 +1,17 @@
+name: Lint Helmchart
+
+on:
+  push:
+    paths:
+      - 'helmchart/**'
+    branches: [main]  # Trigger on pushes to the main branch
+  pull_request:
+    paths:
+      - 'helmchart/**'
+    branches: [main]  # Trigger on pushes to the main branch
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_helm-lint.yml
+    with:
+      chart-path: helmchart
